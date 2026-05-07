@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-class R2R_ADC:
+class R2R_ADC1ps:
     def __init__(self, dynamic_range, compare_time=0.01, verbose=False):
         self.dynamic_range = dynamic_range
         self.verbose = verbose
@@ -56,7 +56,7 @@ class R2R_ADC:
 
 if __name__ == "__main__":
     try:
-        adc = R2R_ADC(3.300)
+        adc = R2R_ADC1ps(3.300)
         while True:
             print("Напряжение cs", adc.get_sc_voltage(), "В")
             # print("Напряжение sar", adc.get_sar_voltage(), "В")
