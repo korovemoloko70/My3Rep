@@ -1,5 +1,5 @@
 import r2r_adc as r2r
-import adc_plot
+import adc_plot_pp as adc_plot
 import numpy as np
 import time
 
@@ -14,7 +14,7 @@ try:
     ctime = begin_time
     while (ctime-begin_time)/1e9 < duration:
         ctime = time.time_ns()
-        volt = adc.get_sc_voltage()
+        volt = adc.get_sar_voltage()
         print(volt)
         time_vals.append((ctime-begin_time)/1e9)
         voltage_vals.append(volt)

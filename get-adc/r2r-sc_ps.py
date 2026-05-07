@@ -1,5 +1,5 @@
 import r2r_adc_ps as r2r_ps
-import adc_plot
+import adc_plot_ps as adc_plot
 import numpy as np
 import time
 
@@ -18,7 +18,7 @@ try:
         print(volt)
         time_vals.append((ctime-begin_time)/1e9)
         voltage_vals.append(volt)
-    adc_plot.plot_voltage_vs_time(time_vals, voltage_vals, np.max(voltage_vals)), title="PS, перебор +1"
-    adc_plot.plot_sampling_period_hist(time_vals), title="PS, перебор +1"
+    adc_plot.plot_voltage_vs_time(time_vals, voltage_vals, np.max(voltage_vals))
+    adc_plot.plot_sampling_period_hist(time_vals)
 finally:
     adc.deinit()
