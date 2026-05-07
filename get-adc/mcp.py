@@ -1,5 +1,5 @@
 import mcp3021_driver as mcp
-import adc_plot
+import adc_plot_pp as adc_plot
 import numpy as np
 import time
 
